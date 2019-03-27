@@ -1,0 +1,8 @@
+# Ignore VS Code Settings
+.vscode
+
+# Ignore build files
+build
+
+# Ignore any executables
+bin/*
