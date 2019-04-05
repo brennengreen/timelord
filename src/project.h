@@ -7,28 +7,27 @@
 class TimelordProject {
     public:
         TimelordProject(std::string projectName) {
-            setProjectName(projectName);
-            if (findProjectFile(projectName) == false) {
-                writeProjectFile(projectName);
+            set_name(projectName);
+            if (find_file(projectName) == false) {
+                write_file(projectName);
             }
         }
         
-        void writeProjectClockIn(std::string projectFilePath);
-        void writeProjectClockOut(std::string projectFilePath);
+        void clock_in(std::string path);
+        void clock_out(std::string path);
 
-        void setProjectName(std::string projectName);
-        void setProjectFilePathString(std::string projectFilePath);
+        void set_name(std::string name);
+        void set_path(std::string path);
 
-        float receiveProjectHours();
-        float receiveProjectHours();
+        float receive_hours();
 
-        bool findProjectFile(std::string projectName);
+        bool find_file(std::string name);
 
-        std::string writeProjectFile(std::string projectName);
-        std::string getProjectName();
+        std::string write_file(std::string name);
+        std::string get_name();
     private:
-        std::string projectNameString;
-        std::string projectFilePathString;
+        std::string name_string;
+        std::string path_string;
         // type projectStartTimeInMilliSec
 };
 
